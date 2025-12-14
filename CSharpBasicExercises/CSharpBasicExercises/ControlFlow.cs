@@ -65,5 +65,38 @@ namespace CSharpBasicExercises
             String output = numberAsStr + "! " + "= " + factorial;
             return output;
         }
+
+        /*
+        4- Write a program that picks a random number between 1 and 10. 
+        Give the user 4 chances to guess the number. 
+        If the user guesses the number, display “You won"; otherwise, display “You lost". 
+        (To make sure the program is behaving correctly, you can display the secret number on the console first.)
+        */
+        public static String GuessRandomNumber() {
+            var randomNumber = new Random();
+            int number = randomNumber.Next(1, 10);
+            // Console.WriteLine(number); // For testing
+
+            bool won = false;
+            int chances = 4;
+
+            Console.WriteLine("Please guess a number between 1 and 10");
+            while (chances > 0 && !won)
+            {
+                chances--;
+                int guess = int.Parse(Console.ReadLine());
+
+                if (guess == number)
+                    won = true;
+
+                Console.WriteLine("Please guess again");
+            }
+
+
+            if (won) return "You won!";
+            else return "You lost :(";
+        }
+
+
     }
 }

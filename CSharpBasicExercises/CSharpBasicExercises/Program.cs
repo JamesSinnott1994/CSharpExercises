@@ -12,7 +12,8 @@ namespace CSharpBasicExercises
         {
             // Console.WriteLine(ControlFlow.GetNumsDivisibleByThree());
             //Console.WriteLine(ControlFlow.GetSumFromUserInput());
-            Console.WriteLine(ControlFlow.GetFactorialFromUserInput());
+            //Console.WriteLine(ControlFlow.GetFactorialFromUserInput());
+            Console.WriteLine(ControlFlow.GuessRandomNumber());
         }
     }
 }
