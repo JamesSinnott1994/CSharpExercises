@@ -14,7 +14,9 @@ namespace CSharpBasicExercises
             //Console.WriteLine(ControlFlow.GetSumFromUserInput());
             //Console.WriteLine(ControlFlow.GetFactorialFromUserInput());
             //Console.WriteLine(ControlFlow.GuessRandomNumber());
-            Console.WriteLine(ControlFlow.GetHighestNumber());
+            //Console.WriteLine(ControlFlow.GetHighestNumber());
+
+            ArraysAndLists.DisplayFriendLikes();
         }
     }
 }
