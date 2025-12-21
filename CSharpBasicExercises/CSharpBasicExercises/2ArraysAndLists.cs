@@ -64,5 +64,37 @@ namespace CSharpBasicExercises
 
             Console.WriteLine(reversedName);
         }
+
+        /*
+         * 3- Write a program and ask the user to enter 5 numbers. 
+         * If a number has been previously entered, display an error message and ask the user to re-try. 
+         * Once the user successfully enters 5 unique numbers, sort them and display the result on the console.
+         */
+        public static void EnterUniqueNumbers() {
+            Console.WriteLine("Please enter five numbers");
+
+            int count = 0;
+            List<int> numbers = new List<int>();
+
+            while (count < 5)
+            {
+                Console.WriteLine("Please enter a number");
+                int number = int.Parse(Console.ReadLine());
+
+                if (numbers.Contains(number)) {
+                    Console.WriteLine("Error: Please enter a number not already entered");
+                    continue;
+                }
+                numbers.Add(number);
+
+                count++;
+            }
+
+            numbers.Sort();
+            
+            foreach (int number in numbers) {
+                Console.WriteLine(number);
+            }
+        }
     }
 }

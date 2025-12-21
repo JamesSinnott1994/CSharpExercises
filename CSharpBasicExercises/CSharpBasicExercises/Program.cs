@@ -17,7 +17,8 @@ namespace CSharpBasicExercises
             //Console.WriteLine(ControlFlow.GetHighestNumber());
 
             //ArraysAndLists.DisplayFriendLikes();
-            ArraysAndLists.ReverseName();
+            //ArraysAndLists.ReverseName();
+            ArraysAndLists.EnterUniqueNumbers();
         }
     }
 }
