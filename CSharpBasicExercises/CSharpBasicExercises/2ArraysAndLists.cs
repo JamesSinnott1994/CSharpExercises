@@ -46,5 +46,23 @@ namespace CSharpBasicExercises
             }
             return message;
         }
+
+        /*
+         * 2- Write a program and ask the user to enter their name. 
+         * Use an array to reverse the name and then store the result in a new string. 
+         * Display the reversed name on the console.
+        */
+        public static void ReverseName() {
+            string name = Console.ReadLine();
+            string reversedName = "";
+
+            for (int i = name.Length - 1; i >= 0; i--)
+            {
+                // James, L = 5
+                reversedName += name[i];
+            }
+
+            Console.WriteLine(reversedName);
+        }
     }
 }

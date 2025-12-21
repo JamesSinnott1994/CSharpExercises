@@ -16,7 +16,8 @@ namespace CSharpBasicExercises
             //Console.WriteLine(ControlFlow.GuessRandomNumber());
             //Console.WriteLine(ControlFlow.GetHighestNumber());
 
-            ArraysAndLists.DisplayFriendLikes();
+            //ArraysAndLists.DisplayFriendLikes();
+            ArraysAndLists.ReverseName();
         }
     }
 }
