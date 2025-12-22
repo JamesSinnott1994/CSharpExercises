@@ -96,5 +96,39 @@ namespace CSharpBasicExercises
                 Console.WriteLine(number);
             }
         }
+
+        /*
+         * 4- Write a program and ask the user to continuously enter a number or type "Quit" to exit. 
+         * The list of numbers may include duplicates. Display the unique numbers that the user has entered.
+         */
+        public static void DisplayUniqueNumbers() {
+            var numbers = new List<int>();
+            bool quit = false;
+
+            while (!quit) {
+                var input = Console.ReadLine();
+
+                if (input.Equals("Quit"))
+                {
+                    quit = true;
+                    break;
+                }
+
+                int number = int.Parse(input);
+                numbers.Add(number);
+
+                var distinctNumbers = numbers.Distinct();
+
+                foreach (var num in distinctNumbers) {
+                    Console.WriteLine(num);
+                }
+				Console.WriteLine("--------------------");
+            }
+
+
+        }
+
+
+
     }
 }

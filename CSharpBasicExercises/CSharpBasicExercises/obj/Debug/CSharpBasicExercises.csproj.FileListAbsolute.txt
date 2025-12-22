@@ -5,3 +5,10 @@ C:\CSharp\CSharpExercises\CSharpBasicExercises\CSharpBasicExercises\obj\Debug\CS
 C:\CSharp\CSharpExercises\CSharpBasicExercises\CSharpBasicExercises\obj\Debug\CSharpBasicExercises.csproj.CoreCompileInputs.cache
 C:\CSharp\CSharpExercises\CSharpBasicExercises\CSharpBasicExercises\obj\Debug\CSharpBasicExercises.exe
 C:\CSharp\CSharpExercises\CSharpBasicExercises\CSharpBasicExercises\obj\Debug\CSharpBasicExercises.pdb
+C:\Users\JamesSinnott\source\repos\CSharpExercises\CSharpBasicExercises\CSharpBasicExercises\bin\Debug\CSharpBasicExercises.exe.config
+C:\Users\JamesSinnott\source\repos\CSharpExercises\CSharpBasicExercises\CSharpBasicExercises\bin\Debug\CSharpBasicExercises.exe
+C:\Users\JamesSinnott\source\repos\CSharpExercises\CSharpBasicExercises\CSharpBasicExercises\bin\Debug\CSharpBasicExercises.pdb
+C:\Users\JamesSinnott\source\repos\CSharpExercises\CSharpBasicExercises\CSharpBasicExercises\obj\Debug\CSharpBasicExercises.csproj.AssemblyReference.cache
+C:\Users\JamesSinnott\source\repos\CSharpExercises\CSharpBasicExercises\CSharpBasicExercises\obj\Debug\CSharpBasicExercises.csproj.CoreCompileInputs.cache
+C:\Users\JamesSinnott\source\repos\CSharpExercises\CSharpBasicExercises\CSharpBasicExercises\obj\Debug\CSharpBasicExercises.exe
+C:\Users\JamesSinnott\source\repos\CSharpExercises\CSharpBasicExercises\CSharpBasicExercises\obj\Debug\CSharpBasicExercises.pdb
