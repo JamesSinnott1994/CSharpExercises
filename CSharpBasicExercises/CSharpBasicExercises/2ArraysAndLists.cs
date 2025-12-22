@@ -124,11 +124,46 @@ namespace CSharpBasicExercises
                 }
 				Console.WriteLine("--------------------");
             }
-
-
         }
 
+        /*
+         * 5- Write a program and ask the user to supply a list of comma separated numbers (e.g 5, 1, 9, 2, 10). 
+         * If the list is empty or includes less than 5 numbers, display "Invalid List" and ask the user to re-try; 
+         * otherwise, display the 3 smallest numbers in the list.
+         */
+        public static void EnterValidList() {
+			Console.WriteLine("Please supply a list of comma separated numbers: \n");
 
+            bool valid = false;
+            var numbers = new List<int>();
+            while (!valid) {
+                String[] input = Console.ReadLine().Split(',');
 
+                // Get and parse input
+                foreach (var num in input)
+                {
+                    var trimmedNumber = num.Trim(); // Need to create a new string here
+                    numbers.Add(int.Parse(trimmedNumber));
+                }
+
+                // Validation
+                if (numbers.Count < 5)
+                {
+                    Console.WriteLine("Invalid list. Please try again");
+                    numbers.Clear();
+                }
+                else
+                {
+                    valid = true;
+                }
+            }
+
+            // Display three smallest numbers
+            numbers.Sort();
+            for (int i = 0; i < 3; i++) {
+				Console.WriteLine(numbers[i]);
+            }
+
+        }
     }
 }

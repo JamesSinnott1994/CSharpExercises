@@ -19,7 +19,8 @@ namespace CSharpBasicExercises
             //ArraysAndLists.DisplayFriendLikes();
             //ArraysAndLists.ReverseName();
             //ArraysAndLists.EnterUniqueNumbers();
-            ArraysAndLists.DisplayUniqueNumbers();
+            //ArraysAndLists.DisplayUniqueNumbers();
+            ArraysAndLists.EnterValidList();
         }
     }
 }
