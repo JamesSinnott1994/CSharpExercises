@@ -20,7 +20,9 @@ namespace CSharpBasicExercises
             //ArraysAndLists.ReverseName();
             //ArraysAndLists.EnterUniqueNumbers();
             //ArraysAndLists.DisplayUniqueNumbers();
-            ArraysAndLists.EnterValidList();
+            //ArraysAndLists.EnterValidList();
+
+            WorkingWithText.DetermineConsectivity();
         }
     }
 }
