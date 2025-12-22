@@ -27,6 +27,9 @@ namespace CSharpBasicExercises
             //WorkingWithText.CheckTimeValidity();
             //WorkingWithText.MakeInputPascalCase();
             //WorkingWithText.CountVowels();
+
+            //WorkingWithFiles.DisplayNumberOfWordsFromFile();
+            //WorkingWithFiles.DisplayLongestWordFromFile();
         }
     }
 }
