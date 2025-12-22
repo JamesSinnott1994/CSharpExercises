@@ -22,7 +22,11 @@ namespace CSharpBasicExercises
             //ArraysAndLists.DisplayUniqueNumbers();
             //ArraysAndLists.EnterValidList();
 
-            WorkingWithText.DetermineConsectivity();
+            //WorkingWithText.DetermineConsectivity();
+            WorkingWithText.CheckForDuplicates();
+            //WorkingWithText.CheckTimeValidity();
+            //WorkingWithText.MakeInputPascalCase();
+            //WorkingWithText.CountVowels();
         }
     }
 }
