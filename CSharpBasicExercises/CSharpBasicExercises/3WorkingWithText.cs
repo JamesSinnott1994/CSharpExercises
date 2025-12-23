@@ -47,8 +47,37 @@ namespace CSharpBasicExercises
 		 * If the user simply presses Enter, without supplying an input, exit immediately; otherwise, check to see if there are duplicates. 
 		 * If so, display "Duplicate" on the console.
 		 */
-		public static void CheckForDuplicates() { 
-			
+		public static void CheckForDuplicates() 
+		{
+			bool exit = false;
+			Console.WriteLine("Please enter numbers separated by a hyphen");
+			var input = Console.ReadLine();
+
+			while (!exit)
+            {
+				Console.WriteLine("Continue");
+				if (string.IsNullOrEmpty(input)) // Check for Enter
+				{
+					Console.WriteLine("Exit");
+					exit = true;
+				} else
+                {
+					var numbersSplit = input.Split('-'); // [1,2,4,4]
+					for (int i = 1; i < numbersSplit.Length; i++)
+                    {
+						if (numbersSplit[i].Equals(numbersSplit[i-1]))
+                        {
+                            Console.WriteLine("Duplicate");
+							exit = true;
+
+                        }
+                    }
+					Console.WriteLine("No Duplicates");
+					exit = true;
+                }
+
+
+			}
 		}
 
 
