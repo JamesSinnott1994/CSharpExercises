@@ -23,10 +23,10 @@ namespace CSharpBasicExercises
             //ArraysAndLists.EnterValidList();
 
             //WorkingWithText.DetermineConsectivity();
-            WorkingWithText.CheckForDuplicates();
+            //WorkingWithText.CheckForDuplicates();
             //WorkingWithText.CheckTimeValidity();
             //WorkingWithText.MakeInputPascalCase();
-            //WorkingWithText.CountVowels();
+            WorkingWithText.CountVowels();
 
             //WorkingWithFiles.DisplayNumberOfWordsFromFile();
             //WorkingWithFiles.DisplayLongestWordFromFile();

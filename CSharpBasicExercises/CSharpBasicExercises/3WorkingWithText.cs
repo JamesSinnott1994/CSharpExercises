@@ -83,12 +83,12 @@ namespace CSharpBasicExercises
 
 		/*
 		 * 3- Write a program and ask the user to enter a time value in the 24-hour time format (e.g. 19:00). 
+		 * 
 		 * A valid time should be between 00:00 and 23:59. If the time is valid, display "Ok"; otherwise, display "Invalid Time". 
 		 * If the user doesn't provide any values, consider it as invalid time.
 		 */
 		public static void CheckTimeValidity()
 		{
-
 		}
 
 		/*
@@ -110,7 +110,17 @@ namespace CSharpBasicExercises
 		 */
 		public static void CountVowels()
 		{
+            Console.WriteLine("Please enter a word in English");
+			string word = Console.ReadLine();
 
+			int noOfVowels = 0;
+			foreach (char c in word)
+            {
+				if (c.Equals('a') || c.Equals('e') || c.Equals('o') || c.Equals('u') || c.Equals('i')) {
+					noOfVowels++;
+				}
+            }
+            Console.WriteLine(noOfVowels);
 		}
 	}
 }
