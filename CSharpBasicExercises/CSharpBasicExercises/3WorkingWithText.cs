@@ -100,7 +100,22 @@ namespace CSharpBasicExercises
 		 */
 		public static void MakeInputPascalCase()
 		{
+			Console.WriteLine("Please enter a fews words separated by a space");
+			var input = Console.ReadLine().Trim().Split(' ');
 
+			StringBuilder combinedWord = new StringBuilder("");
+			for (int i = 0; i < input.Length; i++)
+            {
+				string firstLetter = input[i].Substring(0, 1);
+				string restOfWord = input[i].Substring(1);
+
+				firstLetter = firstLetter.ToUpper();
+				restOfWord = restOfWord.ToLower();
+
+				combinedWord.Append(firstLetter).Append(restOfWord);
+			}
+
+            Console.WriteLine(combinedWord);
 		}
 
 		/*

@@ -25,8 +25,8 @@ namespace CSharpBasicExercises
             //WorkingWithText.DetermineConsectivity();
             //WorkingWithText.CheckForDuplicates();
             //WorkingWithText.CheckTimeValidity();
-            //WorkingWithText.MakeInputPascalCase();
-            WorkingWithText.CountVowels();
+            WorkingWithText.MakeInputPascalCase();
+            //WorkingWithText.CountVowels();
 
             //WorkingWithFiles.DisplayNumberOfWordsFromFile();
             //WorkingWithFiles.DisplayLongestWordFromFile();
