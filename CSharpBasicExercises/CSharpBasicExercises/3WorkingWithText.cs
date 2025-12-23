@@ -69,14 +69,11 @@ namespace CSharpBasicExercises
                         {
                             Console.WriteLine("Duplicate");
 							exit = true;
-
                         }
                     }
 					Console.WriteLine("No Duplicates");
 					exit = true;
                 }
-
-
 			}
 		}
 
@@ -89,6 +86,24 @@ namespace CSharpBasicExercises
 		 */
 		public static void CheckTimeValidity()
 		{
+			Console.WriteLine("Please enter a time value in the 24-hour time format (e.g. 19:45)");
+			string input = Console.ReadLine();
+
+			string hours = input.Split(':')[0];
+			int hourLeftPart = hours[0] - '0';
+			int hourRightPart = hours[1] - '0';
+
+			string minutes = input.Split(':')[1];
+			int minutesLeftPart = minutes[0] - '0';
+			int minutesRightPart = minutes[1] - '0';
+
+			if (hours.Length > 2 || (hourLeftPart < 0 || hourLeftPart > 2) || (hourLeftPart == 2 && hourRightPart > 4)
+				|| minutes.Length > 2 || (minutesLeftPart < 0 || minutesLeftPart > 5)) {
+                Console.WriteLine("Invalid Time");
+			} else
+            {
+				Console.WriteLine("Valid Time");
+			}
 		}
 
 		/*
