@@ -10,10 +10,27 @@ namespace CSharpIntermediateExercises
     {
         static void Main(string[] args)
         {
+            // StopWatchProgram();
+
+            string title = "How to create a post in C#";
+            string description = "An exericse in the C# Intermediate course...";
+            Post post = new Post(title, description);
+
+            post.UpVote();
+            post.UpVote();
+            post.DownVote();
+            post.UpVote();
+
+            Console.WriteLine("Current post vote value is: " + post.Vote);
+            post.Info();
+        }
+
+        public static void StopWatchProgram() {
             Stopwatch sw = new Stopwatch();
 
             bool ongoing = true;
-            while (ongoing) {
+            while (ongoing)
+            {
                 Console.WriteLine("Please type 'start' to start the Stopwatch and 'stop' to end it or 'quit' to end the program \n");
                 string input = Console.ReadLine();
 
@@ -24,15 +41,16 @@ namespace CSharpIntermediateExercises
                         throw new InvalidOperationException("The stopwatch has already been started.");
                     }
                     sw.Start();
-                } else if (input.Equals("stop")) {
+                }
+                else if (input.Equals("stop"))
+                {
                     sw.Stop();
-                } else if (input.Equals("quit"))
+                }
+                else if (input.Equals("quit"))
                 {
                     ongoing = false;
                 }
             }
-
-            
         }
     }
 }
