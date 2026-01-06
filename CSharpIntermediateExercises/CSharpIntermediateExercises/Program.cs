@@ -11,18 +11,8 @@ namespace CSharpIntermediateExercises
         static void Main(string[] args)
         {
             // StopWatchProgram();
-
-            string title = "How to create a post in C#";
-            string description = "An exericse in the C# Intermediate course...";
-            Post post = new Post(title, description);
-
-            post.UpVote();
-            post.UpVote();
-            post.DownVote();
-            post.UpVote();
-
-            Console.WriteLine("Current post vote value is: " + post.Vote);
-            post.Info();
+            // PostProgram();
+            StackProgram();
         }
 
         public static void StopWatchProgram() {
@@ -51,6 +41,34 @@ namespace CSharpIntermediateExercises
                     ongoing = false;
                 }
             }
+        }
+
+        public static void PostProgram() {
+            string title = "How to create a post in C#";
+            string description = "An exericse in the C# Intermediate course...";
+            Post post = new Post(title, description);
+
+            post.UpVote();
+            post.UpVote();
+            post.DownVote();
+            post.UpVote();
+
+            Console.WriteLine("Current post vote value is: " + post.Vote);
+            post.Info();
+        }
+
+        public static void StackProgram() {
+
+            Stack stack = new Stack();
+
+            stack.Push(1);
+            stack.Push("James");
+            stack.Push("Martin");
+
+            Console.WriteLine(stack.Pop());
+            Console.WriteLine(stack.Pop());
+            Console.WriteLine(stack.Pop());
+
         }
     }
 }

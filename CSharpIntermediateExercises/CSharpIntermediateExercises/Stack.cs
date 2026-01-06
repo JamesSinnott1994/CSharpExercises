@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,16 +9,30 @@ namespace CSharpIntermediateExercises
 {
     class Stack
     {
-        public void Push(object obj) { 
-        
+        ArrayList stack;
+
+        public Stack() {
+            stack = new ArrayList();
+        }
+
+        public void Push(object obj) {
+            // Throw InvalidOperationException
+            if (obj != null)
+                stack.Add(obj);
         }
 
         public object Pop() {
-            return null;
+            // Throw InvalidOperationException
+            if (stack.Count > 0) {
+                object removed = stack[stack.Count - 1];
+                stack.RemoveAt(stack.Count - 1);
+                return removed;
+            }
+            return "Nothing to pop";
         }
 
-        public void Clear() { 
-        
+        public void Clear() {
+            stack.Clear();
         }
     }
 }
