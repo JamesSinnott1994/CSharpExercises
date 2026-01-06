@@ -9,30 +9,31 @@ namespace CSharpIntermediateExercises
 {
     class Stack
     {
-        ArrayList stack;
+        ArrayList _stack;
 
         public Stack() {
-            stack = new ArrayList();
+            _stack = new ArrayList();
         }
 
         public void Push(object obj) {
             // Throw InvalidOperationException
-            if (obj != null)
-                stack.Add(obj);
+            if (obj == null)
+                throw new InvalidOperationException("You cannot add a null object to the stack.");
+
+            _stack.Add(obj);
         }
 
         public object Pop() {
-            // Throw InvalidOperationException
-            if (stack.Count > 0) {
-                object removed = stack[stack.Count - 1];
-                stack.RemoveAt(stack.Count - 1);
-                return removed;
-            }
-            return "Nothing to pop";
+
+            if (_stack.Count == 0)
+                throw new InvalidOperationException("There are no elements in the stack yet.");
+            object removed = _stack[_stack.Count - 1];
+            _stack.RemoveAt(_stack.Count - 1);
+            return removed;
         }
 
         public void Clear() {
-            stack.Clear();
+            _stack.Clear();
         }
     }
 }
