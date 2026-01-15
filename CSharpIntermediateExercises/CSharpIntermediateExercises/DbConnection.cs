@@ -8,8 +8,8 @@ namespace CSharpIntermediateExercises
 {
     abstract class DbConnection
     {
-        private String ConnectionString { get; set; }
-        private TimeSpan Timeout { get; set; }
+        public String ConnectionString { get; set; }
+        public TimeSpan Timeout { get; set; }
 
         public DbConnection(String connectionString) {
 
