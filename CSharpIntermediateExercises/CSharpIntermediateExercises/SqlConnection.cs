@@ -8,19 +8,20 @@ namespace CSharpIntermediateExercises
 {
     class SqlConnection : DbConnection
     {
-        public SqlConnection()
-            : base("SqlConnection") {
-            
+        public SqlConnection(string connectionString, int seconds)
+            : base(connectionString, seconds) { }
+
+        public override void OpenConnection()
+        {
+            IsOpen = true;
+            System.Console.WriteLine("SQL database connection is now open...");
+            System.Console.WriteLine("Connection string: {0}", ConnectionString);
         }
 
-        public override void Open()
+        public override void CloseConnection()
         {
-            Console.WriteLine("Open connection");
-        }
-
-        public override void Closed()
-        {
-            Console.WriteLine("Close connection");
+            IsOpen = false;
+            System.Console.WriteLine("SQL database conneciton is now closed...");
         }
     }
 }

@@ -12,7 +12,8 @@ namespace CSharpIntermediateExercises
         {
             // StopWatchProgram();
             // PostProgram();
-            StackProgram();
+            //StackProgram();
+            DatabaseConnectionProgram();
         }
 
         public static void StopWatchProgram() {
@@ -69,6 +70,17 @@ namespace CSharpIntermediateExercises
             Console.WriteLine(stack.Pop());
             Console.WriteLine(stack.Pop());
 
+        }
+
+        public static void DatabaseConnectionProgram() {
+            SqlConnection sqlConnection = new SqlConnection("SqlConnection", 2);
+            OracleConnection oracleConnection = new OracleConnection("OracleConnection", 2);
+
+            sqlConnection.OpenConnection();
+            sqlConnection.CloseConnection();
+
+            oracleConnection.OpenConnection();
+            oracleConnection.OpenConnection();
         }
     }
 }

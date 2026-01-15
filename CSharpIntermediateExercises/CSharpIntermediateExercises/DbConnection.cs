@@ -8,18 +8,21 @@ namespace CSharpIntermediateExercises
 {
     abstract class DbConnection
     {
-        public String ConnectionString { get; set; }
-        public TimeSpan Timeout { get; set; }
+        public string ConnectionString { get; private set; }
+        public TimeSpan TimeOut { get; private set; }
+        public bool IsOpen { get; protected set; }
 
-        public DbConnection(String connectionString) {
+        public DbConnection(String connectionString, int seconds) {
 
             if (connectionString == null || connectionString.Equals(""))
                 throw new InvalidOperationException("Connection string must be valid");
 
-            this.ConnectionString = connectionString;
+            ConnectionString = connectionString;
+            TimeOut = TimeSpan.FromSeconds(seconds);
+            IsOpen = false;
         }
 
-        public abstract void Open();
-        public abstract void Closed();
+        public abstract void OpenConnection();
+        public abstract void CloseConnection();
     }
 }
