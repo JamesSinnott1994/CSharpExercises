@@ -8,8 +8,8 @@ namespace CSharpIntermediateExercises
 {
     class DbCommand
     {
-        public DbConnection Connection { get; set; }
-        public String Instruction { get; protected set; }
+        public DbConnection Connection { get; private set; }
+        public String Instruction { get; private set; }
         public DbCommand(DbConnection connection, String instruction) {
             if (connection == null)
                 throw new InvalidOperationException("Connection string must be valid");
@@ -21,7 +21,16 @@ namespace CSharpIntermediateExercises
             Instruction = instruction;
         }
 
-        public void Execute() { 
+        public void Execute() {
+
+            // Open the connection
+            Connection.OpenConnection();
+
+            // Run the instruction
+            Console.WriteLine(Instruction);
+
+            // Close the connection
+            Connection.CloseConnection();
 
         }
     }

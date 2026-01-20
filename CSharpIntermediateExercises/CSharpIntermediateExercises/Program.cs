@@ -13,7 +13,8 @@ namespace CSharpIntermediateExercises
             // StopWatchProgram();
             // PostProgram();
             //StackProgram();
-            DatabaseConnectionProgram();
+            //DatabaseConnectionProgram();
+            DatabaseCommandProgram();
         }
 
         public static void StopWatchProgram() {
@@ -81,6 +82,16 @@ namespace CSharpIntermediateExercises
 
             oracleConnection.OpenConnection();
             oracleConnection.OpenConnection();
+        }
+
+        public static void DatabaseCommandProgram()
+        {
+            SqlConnection sqlConnection = new SqlConnection("SqlConnection", 2);
+            OracleConnection oracleConnection = new OracleConnection("OracleConnection", 2);
+
+            String instruction = "SELECT * FROM JOBS";
+            DbCommand command = new DbCommand(oracleConnection, instruction);
+            command.Execute();
         }
     }
 }
