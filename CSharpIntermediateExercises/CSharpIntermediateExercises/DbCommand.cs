@@ -8,8 +8,13 @@ namespace CSharpIntermediateExercises
 {
     class DbCommand
     {
-        public DbCommand(DbConnection connection) { 
+        public DbConnection Connection { get; set; }
+        public String Instruction { get; protected set; }
+        public DbCommand(DbConnection connection) {
+            if (connection == null)
+                throw new InvalidOperationException("Connection string must be valid");
 
+            Connection = connection;
         }
     }
 }
