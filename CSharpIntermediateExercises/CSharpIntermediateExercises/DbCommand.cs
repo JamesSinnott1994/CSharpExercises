@@ -10,11 +10,19 @@ namespace CSharpIntermediateExercises
     {
         public DbConnection Connection { get; set; }
         public String Instruction { get; protected set; }
-        public DbCommand(DbConnection connection) {
+        public DbCommand(DbConnection connection, String instruction) {
             if (connection == null)
                 throw new InvalidOperationException("Connection string must be valid");
 
+            if (instruction == null || instruction.Equals(""))
+                throw new InvalidOperationException("Instruction must be valid");
+
             Connection = connection;
+            Instruction = instruction;
+        }
+
+        public void Execute() { 
+
         }
     }
 }
